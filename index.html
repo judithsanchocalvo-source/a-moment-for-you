@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A Little Message for You</title>
+
+<title>A Moment for You</title>
 
 <style>
+
 * {
   box-sizing: border-box;
 }
@@ -13,154 +16,369 @@
 body {
   margin: 0;
   min-height: 100vh;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   font-family: Arial, Helvetica, sans-serif;
-  background: #f7f6f4;
   color: #191919;
+
+  background:
+    linear-gradient(
+      rgba(255,255,255,0.18),
+      rgba(255,255,255,0.28)
+    ),
+    url("background.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .card {
   width: 90%;
-  max-width: 560px;
-  background: white;
+  max-width: 580px;
+
   text-align: center;
-  padding: 55px 40px;
-  border-radius: 18px;
-  box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+
+  background: rgba(255,255,255,0.93);
+
+  padding: 58px 45px;
+
+  border-radius: 22px;
+
+  border: 1px solid rgba(255,255,255,0.75);
+
+  box-shadow:
+    0 18px 50px rgba(0,0,0,0.13);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .top {
   font-size: 12px;
   font-weight: bold;
-  letter-spacing: 2px;
-  color: #666;
+  letter-spacing: 2.6px;
+  color: #666666;
 }
 
 .line {
-  width: 45px;
+  width: 46px;
   height: 4px;
+
   background: #e65300;
-  margin: 20px auto 32px;
+
+  margin: 20px auto 34px;
+
+  border-radius: 5px;
 }
 
 h1 {
-  font-size: 30px;
-  margin-bottom: 12px;
+  font-size: 32px;
+
+  margin: 0 0 14px;
+
+  line-height: 1.2;
+
+  color: #191919;
+}
+
+.highlight {
+  color: #e65300;
 }
 
 .intro {
-  color: #666;
+  color: #666666;
+
   font-size: 16px;
-  margin-bottom: 32px;
+
+  line-height: 1.6;
+
+  margin-bottom: 30px;
 }
 
 .heart {
   color: #e65300;
-  font-size: 28px;
+
+  font-size: 29px;
+
+  margin-bottom: 25px;
 }
 
 #message {
-  font-size: 27px;
+  font-size: 28px;
+
   line-height: 1.45;
+
   font-weight: bold;
-  margin: 25px 0 35px;
+
+  margin: 12px 0 40px;
+
+  color: #191919;
+}
+
+.separator {
+  width: 2px;
+  height: 30px;
+
+  background: #e65300;
+
+  margin: 0 auto 24px;
 }
 
 .footer {
-  color: #777;
+  color: #777777;
+
   font-size: 14px;
-  line-height: 1.5;
+
+  line-height: 1.7;
+}
+
+.footer strong {
+  color: #444444;
 }
 
 .bottom {
-  margin-top: 35px;
-  color: #999;
-  font-size: 13px;
+  margin-top: 38px;
+
+  padding-top: 23px;
+
+  border-top: 1px solid rgba(0,0,0,0.08);
+
+  color: #888888;
+
+  font-size: 11px;
+
+  font-weight: bold;
+
+  letter-spacing: 1.6px;
 }
 
 @media (max-width: 600px) {
+
+  body {
+    background-attachment: scroll;
+  }
+
   .card {
-    padding: 45px 25px;
+    width: 92%;
+
+    padding: 45px 26px;
+
+    border-radius: 18px;
   }
 
   h1 {
-    font-size: 25px;
+    font-size: 27px;
   }
 
   #message {
     font-size: 23px;
   }
+
+  .intro {
+    font-size: 15px;
+  }
+
 }
+
 </style>
+
 </head>
 
 <body>
 
 <div class="card">
 
-  <div class="top">A MOMENT FOR YOU</div>
+  <div class="top">
+    A MOMENT FOR YOU
+  </div>
 
   <div class="line"></div>
 
-  <h1>A little message for today</h1>
+  <h1>
+    This one is for <span class="highlight">you.</span>
+  </h1>
 
   <div class="intro">
-    Take a breath. This one is for you.
+
+    Take a breath.
+
+    <br>
+
+    Maybe this is something you need to hear today.
+
   </div>
 
-  <div class="heart">♥</div>
+  <div class="heart">
+    ♥
+  </div>
 
   <div id="message"></div>
 
+  <div class="separator"></div>
+
   <div class="footer">
-    Take this one with you today.<br>
-    And be a little kinder to yourself.
+
+    <strong>
+      Keep this one with you today.
+    </strong>
+
+    <br>
+
+    Maybe it was the reminder you needed.
+
   </div>
 
   <div class="bottom">
-    Kindness • Connection • Pause
+
+    KINDNESS • CONNECTION • PAUSE
+
   </div>
 
 </div>
 
+
 <script>
 
 const messages = [
+
   "You're doing better than you think.",
+
+  "You are a wonderful person. Don't forget that.",
+
   "Not everything needs to be solved today.",
+
   "You don't have to carry everything at once.",
+
   "Small progress is still progress.",
+
+  "The world is a little better with you in it.",
+
   "Be as kind to yourself as you are to others.",
-  "It's okay to take things one step at a time.",
+
   "You are allowed to slow down.",
+
+  "Just in case nobody told you today: you're doing a great job.",
+
+  "You don't have to be perfect to be wonderful.",
+
   "Your best can look different from one day to another.",
+
+  "Someone is grateful to have you in their life.",
+
   "One difficult moment doesn't make a difficult day.",
-  "Just in case nobody told you today: you're doing a good job.",
+
+  "You bring more value than you probably realise.",
+
   "Give yourself the same patience you give to others.",
+
   "Pause. Breathe. Begin again.",
+
+  "Your presence matters.",
+
   "Something good can still happen today.",
+
   "You don't need to have everything figured out.",
+
+  "There is something special about being exactly who you are.",
+
   "It's okay if today feels a little heavier than yesterday.",
+
+  "You make a difference in ways you may never get to see.",
+
   "There is no rush. One step is enough for now.",
+
+  "You deserve good things too.",
+
   "Some days, simply showing up is enough.",
+
   "Don't forget to notice how far you've already come.",
+
+  "You are appreciated more than you know.",
+
   "It's okay to ask for help. You don't have to do everything alone.",
+
   "Today doesn't need to be perfect to be a good day.",
+
   "You matter beyond your deadlines and your to-do list.",
+
   "A small win is still worth celebrating.",
+
+  "You deserve the same kindness you give so freely to others.",
+
   "You are allowed to protect your energy.",
+
   "Be proud of the things you handled that nobody else saw.",
-  "Whatever you're carrying today, remember you don't have to carry it all at once."
+
+  "Just a reminder: you are enough.",
+
+  "It's okay to pause before moving on.",
+
+  "Some things can wait. Take care of yourself too.",
+
+  "Never underestimate the positive impact you can have on someone else's day.",
+
+  "You're allowed to have a difficult day.",
+
+  "Don't underestimate the progress nobody else can see.",
+
+  "You don't need to be at 100% every day.",
+
+  "There is strength in knowing when to pause.",
+
+  "You are more than your productivity.",
+
+  "A little rest can make tomorrow feel lighter.",
+
+  "Give yourself credit for how far you've come.",
+
+  "You don't need to earn your rest.",
+
+  "It's okay if all you can do today is your best.",
+
+  "Take today one thing at a time.",
+
+  "Your wellbeing matters too.",
+
+  "Never forget how much you have to offer.",
+
+  "Celebrate the small things. They matter.",
+
+  "You are more capable than you give yourself credit for.",
+
+  "Someone may need exactly the kindness you naturally give.",
+
+  "Whatever you're carrying today, remember you don't have to carry it all at once.",
+
+  "Maybe today is not about doing more. Maybe it's about being a little gentler with yourself.",
+
+  "You are doing enough. You are enough.",
+
+  "There are people who are genuinely happy that you are part of their day.",
+
+  "You've already made it through every difficult day that came before this one.",
+
+  "Take a breath. You don't need to have all the answers today.",
+
+  "Your kindness matters more than you probably realise."
+
 ];
 
-const randomIndex = Math.floor(Math.random() * messages.length);
+
+const randomIndex =
+  Math.floor(Math.random() * messages.length);
+
 
 document.getElementById("message").textContent =
   messages[randomIndex];
 
 </script>
 
+
 </body>
+
 </html>
