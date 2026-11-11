@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Little Message for You</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f6f4;
+  color: #191919;
+}
+
+.card {
+  width: 90%;
+  max-width: 560px;
+  background: white;
+  text-align: center;
+  padding: 55px 40px;
+  border-radius: 18px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+}
+
+.top {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #666;
+}
+
+.line {
+  width: 45px;
+  height: 4px;
+  background: #e65300;
+  margin: 20px auto 32px;
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.intro {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 32px;
+}
+
+.heart {
+  color: #e65300;
+  font-size: 28px;
+}
+
+#message {
+  font-size: 27px;
+  line-height: 1.45;
+  font-weight: bold;
+  margin: 25px 0 35px;
+}
+
+.footer {
+  color: #777;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.bottom {
+  margin-top: 35px;
+  color: #999;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 45px 25px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  #message {
+    font-size: 23px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+  <div class="top">A MOMENT FOR YOU</div>
+
+  <div class="line"></div>
+
+  <h1>A little message for today</h1>
+
+  <div class="intro">
+    Take a breath. This one is for you.
+  </div>
+
+  <div class="heart">♥</div>
+
+  <div id="message"></div>
+
+  <div class="footer">
+    Take this one with you today.<br>
+    And be a little kinder to yourself.
+  </div>
+
+  <div class="bottom">
+    Kindness • Connection • Pause
+  </div>
+
+</div>
+
+<script>
+
+const messages = [
+  "You're doing better than you think.",
+  "Not everything needs to be solved today.",
+  "You don't have to carry everything at once.",
+  "Small progress is still progress.",
+  "Be as kind to yourself as you are to others.",
+  "It's okay to take things one step at a time.",
+  "You are allowed to slow down.",
+  "Your best can look different from one day to another.",
+  "One difficult moment doesn't make a difficult day.",
+  "Just in case nobody told you today: you're doing a good job.",
+  "Give yourself the same patience you give to others.",
+  "Pause. Breathe. Begin again.",
+  "Something good can still happen today.",
+  "You don't need to have everything figured out.",
+  "It's okay if today feels a little heavier than yesterday.",
+  "There is no rush. One step is enough for now.",
+  "Some days, simply showing up is enough.",
+  "Don't forget to notice how far you've already come.",
+  "It's okay to ask for help. You don't have to do everything alone.",
+  "Today doesn't need to be perfect to be a good day.",
+  "You matter beyond your deadlines and your to-do list.",
+  "A small win is still worth celebrating.",
+  "You are allowed to protect your energy.",
+  "Be proud of the things you handled that nobody else saw.",
+  "Whatever you're carrying today, remember you don't have to carry it all at once."
+];
+
+const randomIndex = Math.floor(Math.random() * messages.length);
+
+document.getElementById("message").textContent =
+  messages[randomIndex];
+
+</script>
+
+</body>
+</html>
